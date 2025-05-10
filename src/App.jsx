@@ -28,6 +28,7 @@ import PageNotFound from "./pages/PageNotFound"
 import Error from "./components/Error"
 import { requireAuth } from "./utils/require-auth"
 import "./server"
+import TestContext from "./context/TestContext"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -122,7 +123,11 @@ const router = createBrowserRouter(
 )
 
 function App() {
-  return <RouterProvider router={router} />
+  return <>
+    <TestContext >
+      <RouterProvider router={router} />
+    </TestContext>
+  </> 
 }
 
 export default App
