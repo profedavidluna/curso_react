@@ -1,6 +1,6 @@
 import { useState,useEffect, use } from 'react';
 import React from 'react';
-import styles from './Home.module.css';
+import styles from './Home2.module.css';
 
 import {fetchData} from '../../Api/apiService'; // Adjust the path as necessary
 import apiEndpoints from '../../Api/apiEndpoints';
@@ -14,7 +14,7 @@ import { useContext } from 'react';
 import GlobalContext from '../../Context/GlobalContext'; // Adjust the path as necessary
 
     
-const Home = () => {
+const Home2 = () => {
     const context = useContext(GlobalContext);
     const [characters, setCharacters] = useState([null, null, null]);
     const [episodes, setEpisodes] = useState([null, null, null]);
@@ -93,4 +93,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Home2;

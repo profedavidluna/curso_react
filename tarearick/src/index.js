@@ -4,12 +4,15 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import GlobalContext from './Context/GlobalContext'; // Adjust the path as necessary
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <GlobalContext.Provider value={{characters: [], episodes: []}}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </GlobalContext.Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
