@@ -8,12 +8,16 @@ import RegistroForm from "../Components/Forms/RegistroForm";
 import UserListMemo from "../Components/Hooks/UserListMemo";
 import UserListCallback from "../Components/Hooks/UserListCallback";
 import UserListCombinado from "../Components/Hooks/UserListCombinado";
+import UserList from "../Components/Hooks/UserList";
+import AddColorForm from "../Components/Hooks/AddColorForm";
 
 function AppRouter() {
   return (
     <>
       <div>
         <Link to="/">Main page</Link> | 
+        <Link to="/custom">Custom Hook</Link> |  
+        <Link to="/solo">User List</Link> | 
         <Link to="/memo">Memo Test</Link> | 
         <Link to="/callback">Callback Test</Link> | 
         <Link to="/combinado">Combinado Test</Link> | 
@@ -26,6 +30,9 @@ function AppRouter() {
       <Routes>
         
         <Route path="/home2" element={<Home2/>} />
+        <Route path="/custom" element={<AddColorForm/>} />
+        <Route path="/solo" element={<UserList/>} />
+
         <Route path="/memo" element={<UserListMemo/>} />
         <Route path="/callback" element={<UserListCallback/>} />
         <Route path="/combinado" element={<UserListCombinado/>} />

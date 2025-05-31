@@ -57,4 +57,4 @@ function UserList() {
   );
 }
 
-export default PeopleListWithApiCallProperly;
+export default UserList;
